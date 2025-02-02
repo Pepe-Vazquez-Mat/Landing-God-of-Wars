@@ -3,42 +3,315 @@ body {
   margin: 0;
   background-color: black;
 }
+
 header {
   display: flex;
 }
+
 h1 {
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
   font-size: 30px;
   margin-left: 20px;
 }
+
 .menu_header {
   display: flex;
-  justify-content: space-around 20px;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   margin-top: 28px;
   color: antiquewhite;
-
   list-style: none;
   gap: 50px;
   font-size: 18px;
   cursor: pointer;
   font-family: sans-serif;
 }
-.menu_header:hover {
+
+.itemJuegos:hover,
+.itemPs5:hover,
+.itemPs4:hover,
+.itemServicios:hover,
+.itemAccesorios:hover,
+.itemNoticias:hover,
+.itemTienda:hover,
+.itemAsistencia:hover {
   color: #007aff; /* Cambia el color del texto */
   text-decoration: underline; /* Subraya el texto */
   transition: color 0.3s, text-decoration-color 0.3s; /* Transición suave */
-  color: #007aff; /* Color inicial del texto */
 }
+
 .Iniciar_sesion {
   border-radius: 10px;
   margin-left: 50px;
   font-size: 16px;
   color: white;
+  border-bottom: none;
   background-color: blue;
   cursor: pointer;
-  font-family: sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   width: 140px;
+}
+
+.imagenHero {
+  width: 100%;
+  height: auto;
+}
+
+.BackgroundHero {
+  display: flex;
+  align-items: center; /* Alinea verticalmente los ítems en el centro */
+  justify-content: space-between; /* Distribuye el espacio entre los ítems */
+}
+
+.imgTextHero {
+  display: flex;
+  flex-direction: column; /* Alinea el contenido en columnas */
+  color: white;
+  position: absolute; /* Posicionamiento absoluto si es necesario */
+  right: 150px; /* Derecha del contenedor BackgroundHero */
+  width: 40%; /* Asegura el espacio para el texto */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: larger;
+}
+
+#videos ul {
+  display: flex; /* Activa Flexbox para el contenedor UL */
+  flex-wrap: wrap;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  gap: 30px;
+  padding: 20px;
+}
+
+#videos li {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos horizontalmente */
+  width: 300px; /* Ancho fijo para cada contenedor de video */
+  margin-bottom: 20px;
+}
+
+#videos img {
+  width: 100%; /* Ajusta al 100% del contenedor li para mantener la proporción */
+  height: auto; /* Mantiene la proporción de la imagen automáticamente */
+  max-height: 300px; /* Altura máxima para controlar la visualización */
+  border-radius: 20px;
+}
+
+.textVideo1,
+.textVideo2,
+.textVideo3,
+.textVideo4,
+.textVideo5,
+.textVideo6,
+.textVideo7,
+.textVideo8 {
+  font-size: medium;
+  color: white;
+  text-align: center; /* Asegura que el texto esté centrado */
+  padding: 10px; /* Añade un poco de espacio alrededor del texto */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.buttonVideo1 button,
+.buttonVideo2 button,
+.buttonVideo3 button,
+.buttonVideo4 button,
+.buttonVideo5 button,
+.buttonVideo6 button,
+.buttonVideo7 button,
+.buttonVideo8 button {
+  font-size: 16px;
+  color: white;
+  background-color: #007aff; /* Color azul para que destaque */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  width: auto; /* Auto width to accommodate text */
+  margin-top: 5px; /* Espacio después del texto */
+}
+
+.buttonVideo1 button:hover,
+.buttonVideo2 button:hover,
+.buttonVideo3 button:hover,
+.buttonVideo4 button:hover,
+.buttonVideo5 button:hover,
+.buttonVideo6 button:hover,
+.buttonVideo7 button:hover,
+.buttonVideo8 button:hover {
+  background-color: #0056b3; /* Un tono más oscuro al pasar el ratón */
+  transform: scale(1.05); /* Ligero aumento de tamaño al pasar el ratón */
+}
+footer {
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links li a:hover {
+  color: #007aff;
+}
+/* Ahora el Responsive */
+
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 15%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.close-menu {
+  display: none; /* Oculto por defecto */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1001; /* Asegúrate de que esté sobre otros elementos */
+}
+
+.menu_header.open .close-menu {
+  display: block; /* Muestra el botón cuando el menú está abierto */
+}
+
+@media screen and (min-width: 250px) and (max-width: 740px) {
+  header,
+  .BackgroundHero,
+  #videos ul {
+    flex-direction: column;
+  }
+  .hamburger {
+    display: block;
+  }
+  .menu_header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    color: white;
+    list-style: none;
+    gap: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: sans-serif;
+    transform: translateX(-100%); /* Esconde el menú fuera de la vista */
+    transition: transform 0.3s ease;
+    position: fixed; /* Posición fija para el menú */
+    top: 5px;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Toma toda la altura de la pantalla */
+    background-color: black; /* Fondo para el menú */
+    z-index: 1000; /* Asegura que el menú esté sobre otros contenidos */
+  }
+
+  .menu_header.open {
+    transform: translateX(0);
+  }
+  .close-menu {
+    display: block; /* Muestra el botón de cierre siempre en el menú */
+    position: absolute;
+    top: 4px;
+    left: 72%;
+    background: none;
+    border: none;
+    color: blue;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .hamburger {
+    display: block; /* Asegura que el botón de hamburguesa siempre esté visible */
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .imgTextHero,
+  .imagenHero {
+    width: 90%; /* Ajusta la anchura en dispositivos móviles */
+    position: static; /* Elimina la posición absoluta en tamaños menores */
+    margin-top: 5%;
+  }
+
+  #videos li {
+    max-width: 100%; /* Ajusta cada video para que tome toda la anchura disponible */
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10%;
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+    animation-timeline: --image;
+    animation-name: show;
+    animation-range: entry 25% cover 45%;
+    animation-fill-mode: both;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+    display: flex;
+    position: relative; /* Reduce el tamaño del título en dispositivos muy pequeños */
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 5px;
+  }
 }

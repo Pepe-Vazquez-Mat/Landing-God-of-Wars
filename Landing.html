@@ -12,24 +12,24 @@
       href="https://upload.wikimedia.org/wikipedia/commons/9/91/PlayStation_App_Icon.jpg"
       type="image/x-icon"
     />
-    <link
-      rel="stylesheet"
-      href="C:\FP_DAM\Pruebas_HTML_CSS\Position\LandingPage\style.css"
-    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <h1>God Of Wars</h1>
+      <button class="hamburger" aria-label="Abrir menú">☰</button>
+      <!-- Icono de hamburguesa -->
       <nav class="menu_items">
         <ul class="menu_header">
-          <li>Juegos</li>
-          <li>PS5</li>
-          <li>PS4</li>
-          <li>Servicios</li>
-          <li>Accesorios</li>
-          <li>Noticias</li>
-          <li>Tienda</li>
-          <li>Asistencia</li>
+          <button class="close-menu" aria-label="Cerrar menú">✖</button>
+          <li class="itemJuegos">Juegos</li>
+          <li class="itemPs5">PS5</li>
+          <li class="itemPs4">PS4</li>
+          <li class="itemServicios">Servicios</li>
+          <li class="itemAccesorios">Accesorios</li>
+          <li class="itemNoticias" alt="link a Noticias">Noticias</li>
+          <li class="itemTienda">Tienda</li>
+          <li class="itemAsistencia">Asistencia</li>
           <li>
             <button class="Iniciar_sesion"><span>Iniciar Sesión</span></button>
           </li>
@@ -37,11 +37,147 @@
       </nav>
     </header>
     <main>
-      <div class="hero is-init is-paused">
-        <div class="media-block media-block--video media-block--video--youtube +interactive " tabindex="0" role="button" data-be-yt-call="true" data-uuid="dc1c07bb-4f2d-3677-aef2-03d56840f86d" data-component="video-block" data-lightbox="true" data-lightbox-theme="dark" data-video-id="gOE2BVRCUkM" data-add-yt-thumbnail="false" data-age-gated="true" data-force-age-gate="true" data-video-thumbnail="https://gmedia.playstation.com/is/image/SIEPDC/god-of-war-father-son-en-18may21" data-video-desktop-thumbnail="https://gmedia.playstation.com/is/image/SIEPDC/god-of-war-father-son-en-18may21" data-custom-mobile-width="false" data-custom-tablet-width="false" data-custom-desktop-width="false"><div class="media-block__inner"><figure itemscope="" itemtype="http://schema.org/ImageObject" class="media-block__figure" aria-labelledby="fig-caption-dc1c07bb-4f2d-3677-aef2-03d56840f86d"><picture class="media-block__img lozad lazy-loaded" data-alt="God of War - Be A Warrior: PS4 Gameplay Trailer | E3 2017" data-loaded="true"><source srcset="https://gmedia.playstation.com/is/image/SIEPDC/god-of-war-father-son-en-18may21?$1600px$" media="(min-width: 1024px)"><source srcset="https://gmedia.playstation.com/is/image/SIEPDC/god-of-war-father-son-en-18may21?$1200px$" media="(min-width: 768px)"><source srcset="https://gmedia.playstation.com/is/image/SIEPDC/god-of-war-father-son-en-18may21?$800px$" media="(min-width: 320px)"><noscript><img itemprop="contentUrl" src="https://gmedia.playstation.com/is/image/SIEPDC/god-of-war-father-son-en-18may21?$native$" alt="God of War - Be A Warrior: PS4 Gameplay Trailer | E3 2017"/></noscript><img alt="God of War - Be A Warrior: PS4 Gameplay Trailer | E3 2017"></picture></figure><div class="media-block__overlay"><div class="icon" role="button"><svg class="media-block__icon media-block__icon--dam" viewBox="0 0 64 64" role="img" aria-label="Vídeo" data-di-res-id="c54bb788-eeddc713" data-di-rand="1738191314817"><path fill="#000" fill-opacity=".2" d="M32 11.007c-11.576 0-20.992 9.416-20.992 20.994 0 11.575 9.416 20.992 20.992 20.992 11.574 0 20.992-9.417 20.992-20.992 0-11.578-9.418-20.994-20.992-20.994"></path><path d="M32 8.72c12.836 0 23.28 10.443 23.28 23.28 0 12.837-10.444 23.28-23.28 23.28C19.161 55.28 8.72 44.837 8.72 32 8.72 19.164 19.161 8.72 32 8.72zm0 2.287c-11.576 0-20.992 9.416-20.992 20.994 0 11.575 9.416 20.992 20.992 20.992 11.574 0 20.992-9.417 20.992-20.992 0-11.578-9.418-20.994-20.992-20.994zm-7.425 12.879l19.134 8.129-19.134 8.126V23.886z"></path></svg></div><a class="media-block__youtube-link" aria-label="watch on YouTube test" target="_blank" href="https://www.youtube.com/watch?v=gOE2BVRCUkM" rel="nofollow" data-di-id="di-id-e9e731eb-92901eaa"><div class="icon icon--youtube"><svg class="media-block__icon media-block__icon--youtube" viewBox="0 0 54 12" role="img" aria-label="Third Party" data-di-res-id="aaf657ec-668d8dac" data-di-rand="1738191314821"><use href="/etc.clientlibs/global_pdc/clientlibs/auto-clientlibs/pdc.designkit/resources/ps-icons-map__dig__third-party.svg#ps-icon_third-party_youtube-video"></use></svg></div></a></div></div></div>      </div>
+      <div class="BackgroundHero">
+        <img
+          class="imagenHero"
+          src="https://gmedia.playstation.com/is/image/SIEPDC/god-of-war-hub-background-block-desktop-01-en-28oct22?$4000px$"
+          alt="God of War Background"
+        />
+        <div class="imgTextHero">
+          Todo empezó en 2005, con el lanzamiento de God of War para PlayStation
+          2. Desde entonces, Santa Monica Studio ha desarrollado ocho juegos
+          para diferentes plataformas (el más reciente, en 2022).
+        </div>
+      </div>
+      <div id="videos">
+        <ul>
+          <li class="video1">
+            <img
+              src="https://gmedia.playstation.com/is/image/SIEPDC/god-of-war-hub-thumbnail-ragnarok-en-09sept21?$1200px$"
+            />
+            <div class="textVideo1">
+              God of War Ragnarök Lanzamiento original: PS5, PS4 Fecha de
+              lanzamiento: 9 de noviembre de 2022
+            </div>
+            <div class="buttonVideo1">
+              <button>Comprar</button>
+            </div>
+          </li>
+          <li class="video2">
+            <img
+              src="https://gmedia.playstation.com/is/image/SIEPDC/god-of-war-hub-thumbnail-2018-en-29jul21?$1200px$"
+            />
+            <div class="textVideo2">
+              God of War Lanzamiento original: PS4 Fecha de lanzamiento
+              original: 2018
+            </div>
+            <div class="buttonVideo2">
+              <button>Comprar</button>
+            </div>
+          </li>
+          <li class="video3">
+            <img
+              src="https://gmedia.playstation.com/is/image/SIEPDC/god-of-war-hub-thumbnail-ascension-en-29jul21?$1200px$"
+            />
+            <div class="textVideo3">
+              God of War: Ascension Lanzamiento original: PS3 Fecha de
+              lanzamiento original: 2013
+            </div>
+            <div class="buttonVideo3">
+              <button>Comprar</button>
+            </div>
+          </li>
+          <li class="video4">
+            <img
+              src="https://gmedia.playstation.com/is/image/SIEPDC/god-of-war-hub-thumbnail-ghost-of-sparta-en-29jul21?$1200px$"
+            />
+            <div class="textVideo4">
+              God of War: Ghost of Sparta Lanzamiento original: PSP Fecha de
+              lanzamiento original: 2010
+            </div>
+            <div class="buttonVideo4">
+              <button>Comprar</button>
+            </div>
+          </li>
+
+          <li class="video5">
+            <img
+              src="https://gmedia.playstation.com/is/image/SIEPDC/god-of-war-3-remastered-two-column-01-en-ps4-2Dec20?$1200px$"
+            />
+            <div class="textVideo5">
+              God of War III Lanzamiento original: PS3 Fecha de lanzamiento
+              original: 2010
+            </div>
+            <div class="buttonVideo5">
+              <button>Comprar</button>
+            </div>
+          </li>
+
+          <li class="video6">
+            <img
+              src="https://gmedia.playstation.com/is/image/SIEPDC/god-of-war-hub-thumbnail-chains-of-olympus-en-29jul21?$1200px$"
+            />
+            <div class="textVideo6">
+              God of War: Chains of Olympus Lanzamiento original: PSP Fecha de
+              lanzamiento original: 2008
+            </div>
+            <div class="buttonVideo6">
+              <button>Comprar</button>
+            </div>
+          </li>
+
+          <li class="video7">
+            <img
+              src="https://gmedia.playstation.com/is/image/SIEPDC/god-of-war-hub-thumbnail-gow-ii-en-29jul21?$1200px$"
+            />
+            <div class="textVideo7">
+              God of War II Lanzamiento original: PS2 Fecha de lanzamiento
+              original: 2007
+            </div>
+            <div class="buttonVideo7">
+              <button>Comprar</button>
+            </div>
+          </li>
+          <li class="video8">
+            <img
+              src="https://gmedia.playstation.com/is/image/SIEPDC/god-of-war-hub-thumbnail-gow-i-en-29jul21?$1200px$"
+            />
+            <div class="textVideo8">
+              God of War Lanzamiento original: PS2 Fecha de lanzamiento
+              original: 2005
+            </div>
+            <div class="buttonVideo8">
+              <button>Comprar</button>
+            </div>
+          </li>
+        </ul>
       </div>
     </main>
-  </body>
+    <footer>
+      <div class="footer-content">
+        <p>Contacto: info@godofwars.com</p>
+        <p>© 2025 God Of Wars. Todos los derechos reservados.</p>
+        <ul class="footer-links">
+          <li><a href="#">Política de Privacidad</a></li>
+          <li><a href="#">Términos de Uso</a></li>
+          <li><a href="#">Soporte</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const hamburger = document.querySelector('.hamburger')
+        const closeButton = document.querySelector('.close-menu')
+        const menuHeader = document.querySelector('.menu_header')
 
-  <footer></footer>
+        hamburger.addEventListener('click', function () {
+          menuHeader.classList.toggle('open')
+        })
+
+        closeButton.addEventListener('click', function () {
+          menuHeader.classList.toggle('open')
+        })
+      })
+    </script>
+  </body>
 </html>
